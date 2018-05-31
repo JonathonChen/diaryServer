@@ -4,6 +4,7 @@ export let Get = (ctx) => {
     name: ctx.params.name,
     para: ctx.query
   }
+  console.log(ctx.body)
 }
 
 export let Post = async (ctx) => {
@@ -23,6 +24,13 @@ export let Put = (ctx) => {
 }
 
 export let Delect = (ctx) => {
+  ctx.body = {
+    result: 'delect',
+    name: ctx.params.name,
+    para: ctx.request.body
+  }
+}
+export let userLogin = (ctx) => {
   ctx.body = {
     result: 'delect',
     name: ctx.params.name,

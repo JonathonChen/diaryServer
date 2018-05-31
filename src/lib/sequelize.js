@@ -5,8 +5,8 @@ export default new Sequelize(DBConfig.database, DBConfig.username, DBConfig.pass
   host: DBConfig.host,
   dialect: SystemConfig.db_type,
   dialectOptions: { // MySQL > 5.5，其它数据库删除此项
-    charset: 'utf8mb4',
-    collate: 'utf8mb4_unicode_520_ci',
+    charset: 'utf8',
+    collate: 'utf8_unicode_ci',
     supportBigNumbers: true,
     bigNumberStrings: true
   },
